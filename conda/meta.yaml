@@ -1,0 +1,29 @@
+package:
+    name: stata-parquet
+    version: "0.5.1"
+
+source:
+  path: ../
+  # git_url: https://github.com/mcaceresb/stata-parquet.git
+
+build:
+  number: 1 # [linux]
+  detect_binary_files_with_prefix: true
+
+requirements:
+  build:
+    - make
+    - arrow-cpp
+    - parquet-cpp
+    - boost
+    - gcc
+  run:
+    - arrow-cpp
+    - parquet-cpp
+    - boost
+    - gcc
+
+about:
+  home: https://github.com/mcaceresb/stata-parquet
+  license: MIT
+  summary: "Read and write Parquet files from Stata"
